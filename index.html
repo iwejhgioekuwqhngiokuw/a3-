@@ -64,6 +64,10 @@
             width: 30%;
         }
     
+        .image-placeholder {
+            display: flex;
+            gap: 2rem;
+        }
 
         footer {
             background-color: #0077b6;
@@ -71,6 +75,15 @@
             text-align: center;
             padding: 15px;
             margin-top: 30px;
+        }
+        
+        @media (max-width: 768px){
+            img {
+                width: 70%;
+            }
+            .image-placeholder {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -96,7 +109,7 @@ This replaces the need for messy, uncomfortable traditional impressions using mo
 
     <div class="section">
         <h2>3D Printing</h2>
-        <div class="image-placeholder"><img src="img/shutterstock_1221423328.webp" alt="3d"></div>
+        <div class="image-placeholder"><img src="img/impressora-3d-na-odontologia.jpg" alt="3d"></div>
         <p>
             3D printing in dentistry works hand-in-hand with intraoral scanners. Once a digital model is created, 3D printers can manufacture precise physical replicas or custom dental appliances.
 
@@ -115,7 +128,10 @@ This technology allows the production of dental crowns, bridges, orthodontic ali
 
     <div class="section">
         <h2>Digital Radiography</h2>
-        <div class="image-placeholder"><img src="img/images.jpg" alt="">></div>
+        <div class="image-placeholder"><img src="img/images.jpg" alt="">
+        <img src="img/sensor-pradiografia-digital-mi-fit-t2-micro-imagem-mic11820a-5-1-edited.webp" alt="sensor">
+        </div>
+
         <p>
             Digital radiography has revolutionized dental imaging by replacing traditional X-rays with faster, safer, and more detailed digital images. Instead of film, it uses sensors that capture the image and send it directly to a computer.
 
