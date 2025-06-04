@@ -13,25 +13,8 @@
             color: #333;
         }
 
-        header {
-            background-color: #0077b6;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-
         .container {
-            max-width: 1200px;
+            max-width: 1500px;
             margin: auto;
             padding: 40px 20px;
         }
@@ -42,6 +25,21 @@
             box-shadow: 0 6px 16px rgba(0,0,0,0.1);
             padding: 30px;
             margin-bottom: 40px;
+            flex: 1 1 calc(50% - 30px);
+            box-sizing: border-box;
+        }
+
+        .section-intro {
+            background-color: #e6f4f9;
+            border-left: 8px solid #0077b6;
+            padding: 30px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+
+        }
+        .section-intro h2 {
+            font-size: 2.5rem;
         }
 
         h2 {
@@ -61,7 +59,7 @@
 
 
         img {
-            width: 30%;
+            width: 50%;
         }
     
         .image-placeholder {
@@ -76,7 +74,31 @@
             padding: 15px;
             margin-top: 30px;
         }
-        
+
+        .section-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .section-arch {
+            display: flex;
+            gap: 1rem;
+        }
+
+        #needle {
+            max-width: 50%;
+        }
+
+        #needle img {
+            width: 60%;
+        }
+        .section-image {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            padding: 30px;
+        }
         @media (max-width: 768px){
             img {
                 width: 70%;
@@ -85,23 +107,91 @@
                 display: block;
             }
         }
+        @media (max-width: 1024px) {
+    h2 {
+        font-size: 2rem;
+    }
+    p, li {
+        font-size: 1rem;
+    }
+    .container {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-grid,
+    .section-arch {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section {
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+
+    .section-intro {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-placeholder {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-image img {
+        width: 100%;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    p, li {
+        font-size: 0.95rem;
+    }
+    .section {
+        padding: 15px;
+    }
+}
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Technologies in Dental Offices</h1>
-    <p>Modern Tools Improving Dental Practice and Patient Care</p>
-</header>
 
 <div class="container">
+    <div class="section-intro">
+    <h2>Technology and Architecture at the Service of Dentistry </h2>
+    <p>
+    Our goal is to show how the main technological innovations can transform the daily routine of a dental office. In addition, we explore how to apply architectural principles to create functional, modern spaces that are prepared to integrate these technologies in an intelligent and efficient way.    </p>
+    </div>
+
+    <div class="section-grid">
 
     <div class="section">
         <h2>Intraoral Scanners</h2>
         <div class="image-placeholder"><img src="img/8fTRIOSpod.png" alt="intraoral scanners"></div>
         <p>
-            Intraoral scanners are advanced digital tools that capture detailed 3D images of a patient’s mouth. By projecting LED light onto the teeth and gums, the scanner records how the light reflects back, creating a highly accurate digital model in real time.
-This replaces the need for messy, uncomfortable traditional impressions using molding material. The 3D models are immediately transferred to dental laboratories, accelerating the process of fabricating crowns, veneers, aligners, and other dental devices. This not only improves accuracy but also enhances the patient experience by reducing discomfort and the number of appointments.
+         Intraoral scanners create accurate 3D images of the mouth using LED light, replacing traditional messy molds. They speed up the production of crowns, aligners, and other dental devices, offering more comfort and fewer appointments.   
         </p>
         Source: <a href="https://dentalsorrisoslz.com.br/o-que-e-o-scanner-intraoral/">https://dentalsorrisoslz.com.br/o-que-e-o-scanner-intraoral/ </a>        
 
@@ -111,9 +201,7 @@ This replaces the need for messy, uncomfortable traditional impressions using mo
         <h2>3D Printing</h2>
         <div class="image-placeholder"><img src="img/impressora-3d-na-odontologia.jpg" alt="3d"></div>
         <p>
-            3D printing in dentistry works hand-in-hand with intraoral scanners. Once a digital model is created, 3D printers can manufacture precise physical replicas or custom dental appliances.
-
-This technology allows the production of dental crowns, bridges, orthodontic aligners, surgical guides, dentures, and even tooth replicas with remarkable speed and accuracy. It reduces the dependency on external labs and can produce devices in-house, often within the same day, providing faster solutions for both dentists and patients.
+        3D printers turn digital dental models into physical items like crowns, aligners, dentures, and surgical guides. This technology allows clinics to produce devices in-house quickly, often the same day.
         </p>
         Source: <a href="//blog.suryadental.com.br/impressora-3d-odontologia/">blog.suryadental.com.br/impressora-3d-odontologia</a>
     </div>
@@ -122,7 +210,8 @@ This technology allows the production of dental crowns, bridges, orthodontic ali
         <h2>Management Software</h2>
         <div class="image-placeholder"><img src="img/Dental_Appointment.png" alt="managemtn"></div>
         <p>
-         Dental management software is an essential tool for the efficient operation of modern dental clinics. It simplifies and automates administrative tasks such as appointment scheduling, patient records, financial management, and inventory control.Beyond just administration, some platforms offer marketing tools, automatic reminders for patients, and real-time data access from any device. This not only saves time but also enhances patient communication, reduces errors, and improves the overall organization of the clinic.</p>
+        Dental management software streamlines scheduling, patient records, billing, and inventory. It boosts efficiency, reduces errors, and improves patient communication with automated reminders and online access.
+        </p>
         Source: <a href="https://www.codental.com.br/">https://www.codental.com.br/</a>
 </div>
 
@@ -133,49 +222,91 @@ This technology allows the production of dental crowns, bridges, orthodontic ali
         </div>
 
         <p>
-            Digital radiography has revolutionized dental imaging by replacing traditional X-rays with faster, safer, and more detailed digital images. Instead of film, it uses sensors that capture the image and send it directly to a computer.
-
-Dentists can adjust brightness, contrast, and zoom in for a clearer diagnosis, and patients are exposed to significantly less radiation. Portable X-ray devices have further improved flexibility, allowing images to be taken directly in the treatment chair without moving the patient.
+        Digital X-rays use sensors instead of film, producing faster, clearer images with less radiation. Portable devices allow dentists to take images right at the treatment chair for quicker diagnoses.
         </p>
         Source: <a href="https://blog.dentalspeed.com/raio-x-portatil-odontologico-e-sensor-digital/">https://blog.dentalspeed.com/raio-x-portatil-odontologico-e-sensor-digital/</a>
     </div>
 
-    <div class="section">
+    <div class="section" id="needle">
         <h2>Needle-Free Electronic Anesthesia</h2>
         <div class="image-placeholder"><img src="img/ignesiz-anestezi-uygulamasi-4.webp" alt=""></div>
         <p>
-            This innovative technology eliminates the fear associated with needles during dental procedures. Using a pressurized jet injection system, the anesthetic is delivered through a tiny opening—much smaller than that of a needle—directly into the tissue.
-
-The process is nearly painless, quick, and less invasive, which reduces patient anxiety and discomfort. This method also provides more precise distribution of anesthesia, minimizing side effects and enhancing recovery.
+        This method uses pressurized jets to deliver anesthesia without needles, making treatments nearly painless. It reduces patient anxiety, provides precise numbing, and speeds up recovery.
         </p>
         Source: <a href="https://clinicaorbemdalmolin.com.br/especialidade/anestesia-sem- agulha">https://clinicaorbemdalmolin.com.br/especialidade/anestesia-sem- agulha</a>
     </div>
+</div>
+
+<div class="section-intro">
+    <h2>Architecture Principles in Dental Offices</h2>
+    <p>
+        After learning about the technologies used in a dental office, let’s reflect on how to apply architectural principles — such as <strong>functionality, ergonomics, comfort, safety, aesthetics,</strong> and <strong>operational flow</strong> — in the design of this environment.
+    </p>
+</div>
+
+<div class="section-arch">
 
     <div class="section">
-        <h2>Benefits of Dental Technology</h2>
+        <h2>Intraoral Scanners Setup</h2>
+        <p>
+            <strong>Applied principles:</strong> Functionality, ergonomics, and operational flow.
+        </p>
         <ul>
-            <li><strong>Improved Accuracy:</strong> More precise diagnoses and treatments.</li>
-            <li><strong>Efficiency:</strong> Faster procedures and better workflow.</li>
-            <li><strong>Patient Comfort:</strong> Less invasive treatments and reduced anxiety.</li>
-            <li><strong>Better Organization:</strong> Management tools improve clinic operations.</li>
-            <li><strong>Growth:</strong> Attracts and retains more patients with modern solutions.</li>
+            <li><strong>Location:</strong> Close to the dental chair, with mobile or articulated support for easy handling.</li>
+            <li><strong>Ergonomics:</strong> Within the dentist’s reach to avoid unnecessary movement.</li>
+            <li><strong>Infrastructure:</strong> Needs power outlets and USB/network connections for integration with the clinic's system.</li>
         </ul>
     </div>
 
+    <div class="section">
+        <h2>3D Printers Setup</h2>
+        <p>
+            <strong>Applied principles:</strong> Functionality, safety, and environmental control.
+        </p>
+        <ul>
+            <li><strong>Dedicated space:</strong> Install in a separate room or ventilated area due to particle and vapor emissions.</li>
+            <li><strong>Sound insulation:</strong> Consider soundproofing if placed near clinical areas since some printers are noisy.</li>
+            <li><strong>Workflow:</strong> Must integrate seamlessly with the digital workflow from the intraoral scanner.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Management Software Integration</h2>
+        <p>
+            <strong>Applied principles:</strong> Organization, functionality, and comfort.
+        </p>
+        <ul>
+            <li><strong>Digital integration:</strong> Connect workstations at reception and treatment rooms to the same network.</li>
+            <li><strong>Accessibility:</strong> Use tablets or touchscreens for more agile operations.</li>
+            <li><strong>Clean design:</strong> Maintain organized digital interfaces to reduce clutter in physical spaces.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Digital Radiography Design</h2>
+        <p>
+            <strong>Applied principles:</strong> Safety, efficiency, and mobility.
+        </p>
+        <ul>
+            <li><strong>Shielding:</strong> Fixed X-ray rooms must meet radiation protection standards (lead walls, warning signs).</li>
+            <li><strong>Portable equipment:</strong> Should be safely stored and easily charged for mobility inside treatment rooms.</li>
+            <li><strong>Lighting:</strong> Use indirect lighting to improve image visibility on monitors.</li>
+        </ul>
+    </div>
+</div>
+    <div class="section-image">
+        <img src="img/d41fbc37-7374-47d3-9e1d-b31ebba0a624.jpg" alt="img generated by AI ">
+    </div>
 
     <div class="section">
         <h2>🙂 About Us</h2> 
             <p>This website is a project for our English for Specific Purposes course, created by students from different areas of study. </p>
-            <p>Our goal is to inform and educate users about modern technologies used in dental offices, providing reliable information on how they work, their benefits, and how they improve both dental treatments and the patient experience </p>
+            <p>Our goal is to inform and educate users about modern technologies and architectural principles applied in dental offices, offering reliable information on how they function, their benefits, and how they enhance dental treatments, the patient experience, and the overall efficiency and comfort of the workspace </p>
             <p>Made by: João Felipe Veiga, Gabriela Zanao, João Cabral, Leticia Candiotto, Beatriz, Camilla, Diego Torres and Raquel Freitas </p>    
     </div>
 
-    </div>
-    </div>
-
-
-
-
+</div>
+ 
 
 <script>
     function toggleFAQ(index) {
